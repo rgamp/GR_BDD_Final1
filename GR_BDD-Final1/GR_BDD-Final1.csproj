@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A97930F-114D-4263-90F5-6BF69D930857}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GR_BDD_Final1</RootNamespace>
+    <AssemblyName>GR_BDD-Final1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBconnect.cs" />
+    <Compile Include="F_ajoutClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ajoutClient.Designer.cs">
+      <DependentUpon>F_ajoutClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ajoutCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ajoutCommande.Designer.cs">
+      <DependentUpon>F_ajoutCommande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ajoutProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ajoutProduit.Designer.cs">
+      <DependentUpon>F_ajoutProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_listClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_listClient.Designer.cs">
+      <DependentUpon>F_listClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_menu.Designer.cs">
+      <DependentUpon>F_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_menuClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_menuClient.Designer.cs">
+      <DependentUpon>F_menuClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_menuCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_menuCommande.Designer.cs">
+      <DependentUpon>F_menuCommande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_menuProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_menuProduit.Designer.cs">
+      <DependentUpon>F_menuProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ReschClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ReschClient.Designer.cs">
+      <DependentUpon>F_ReschClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="F_ajoutClient.resx">
+      <DependentUpon>F_ajoutClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ajoutCommande.resx">
+      <DependentUpon>F_ajoutCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ajoutProduit.resx">
+      <DependentUpon>F_ajoutProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_listClient.resx">
+      <DependentUpon>F_listClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_menu.resx">
+      <DependentUpon>F_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_menuClient.resx">
+      <DependentUpon>F_menuClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_menuCommande.resx">
+      <DependentUpon>F_menuCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_menuProduit.resx">
+      <DependentUpon>F_menuProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ReschClient.resx">
+      <DependentUpon>F_ReschClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
